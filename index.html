@@ -324,16 +324,25 @@ body{background:var(--desk);color:var(--ink);font-family:var(--f-body);
 .vids-h{margin:0;text-align:center;font-family:"Lalezar","Tajawal",sans-serif;font-weight:400;font-size:1.7rem;line-height:1.35;color:var(--gold-hi)}
 .vids-h small{font-family:"Tajawal",var(--f-body);font-size:.95rem;color:#fff;font-weight:700}
 .yvs{display:flex;flex-direction:column;gap:12px;flex-shrink:0}
-.yv{display:grid;grid-template-columns:46% 1fr;gap:12px;align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(230,200,121,.4);border-radius:12px;padding:8px}
+.yv{display:flex;flex-direction:column;gap:8px;align-items:stretch;background:rgba(255,255,255,.05);border:1px solid rgba(230,200,121,.4);border-radius:12px;padding:8px}
 .yv-box{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:linear-gradient(135deg,#14254a,#0b1730);border:1px solid var(--gold)}
 .yv-box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .yv-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.yv-play{position:absolute;inset:0;margin:auto;width:54px;height:54px;border-radius:50%;border:2px solid #fff;background:rgba(179,138,52,.92);color:#fff;font-size:1.3rem;cursor:pointer;display:grid;place-items:center;box-shadow:0 6px 16px rgba(0,0,0,.45)}
+.yv-play{position:absolute;inset:0;margin:auto;width:66px;height:66px;border-radius:50%;border:2px solid #fff;background:rgba(179,138,52,.92);color:#fff;font-size:1.3rem;cursor:pointer;display:grid;place-items:center;box-shadow:0 6px 16px rgba(0,0,0,.45)}
 .yv-play:focus-visible{outline:3px solid #fff;outline-offset:3px}
-.yv.on{grid-template-columns:1fr}.yv.on .yv-cap{flex-direction:row;justify-content:space-between}
-.yv-cap{display:flex;flex-direction:column;gap:6px;text-align:right}
+
+.yv-cap{display:flex;justify-content:space-between;align-items:center;gap:6px;text-align:right;padding:0 4px}
 .yv-cap b{font:800 1.05rem "Tajawal",var(--f-body);color:#fff}
 .yv-cap a{font:600 .74rem "Tajawal",var(--f-body);color:var(--gold-hi);text-decoration:none}
+.vid1{align-items:center;text-align:center;gap:10px;justify-content:flex-start;padding-top:22px}
+.vid1 .foot{align-self:stretch}
+.vid1 .yv{width:100%;padding:0;border:0;background:none}
+.vid1 .yv-box{border:3px solid var(--gold-hi);border-radius:14px;box-shadow:0 18px 36px rgba(0,0,0,.5)}
+.vid1 .yv-play{width:78px;height:78px;font-size:1.6rem}
+.v1-t{margin:2px 0 0;font-family:"Lalezar","Tajawal",sans-serif;font-weight:400;font-size:clamp(1.9rem,8vw,2.6rem);line-height:1.3;color:var(--gold-hi)}
+.v1-s{margin:0;font:700 .95rem/1.8 "Tajawal",var(--f-body);color:#fff}
+.v1-a{font:700 .85rem "Tajawal",var(--f-body);color:var(--gold-hi);text-decoration:none;border:1px solid rgba(230,200,121,.5);border-radius:99px;padding:6px 18px}
+.v1-x{margin:0;font:500 .86rem/1.95 "Tajawal",var(--f-body);color:#eef1f7;text-align:justify;border-right:3px solid var(--gold);padding-right:12px}
 /* index */
 .index{padding:24px 24px 12px;gap:12px;overflow:hidden}
 .index h3 small{font-size:.75rem;color:var(--muted);font-family:var(--f-body)}
@@ -510,10 +519,33 @@ function build(){
      <img class="kj-photo" src="${A.kj1}" alt="السيد أحمد كجوك وزير المالية خلال منتدى مصر 2026">
      <ul class="quotes"><li><p>نستهدف خفض الدين لأقل من 70% من الناتج المحلي بحلول 2030.</p><cite>الجزيرة مصر</cite></li><li><p>التوسع في مصادر الطاقة النظيفة لتقليل الاعتماد على الوقود التقليدي وخفض الأعباء الاقتصادية المرتبطة بإنتاج الكهرباء.</p><cite>جريدة الوطن</cite></li><li><p>ترشيد الاستهلاك والتوسع في الطاقة المتجددة يساهم في خفض تكلفة الإنتاج وتخفيف الضغوط على الموارد المالية والعملة الأجنبية.</p><cite>جريدة الوطن</cite></li><li><p>ترشيد الاستهلاك والتوسع في الطاقة المتجددة يمثل محورًا مهمًا في خطة الحكومة لتعزيز أمن الطاقة.</p><cite>جريدة الوطن</cite></li></ul>
      <div class="foot"><span>المصادر: الجزيرة مصر · جريدة الوطن</span><span>صفحة</span></div></section>
-   <section class="page lead-ed vids" data-sec="كلمات معالي وزير المالية">
-     <span class="le-eye">بالصوت والصورة</span>
-     <h3 class="vids-h">كلمات معالي وزير المالية<br><small>السيد/ أحمد كجوك</small></h3>
-     <div class="yvs"><div class="yv" data-yt="3G2jfFac_rA"><div class="yv-box"><img src="https://i.ytimg.com/vi/3G2jfFac_rA/hqdefault.jpg" alt="" onerror="this.remove()"><button type="button" class="yv-play" aria-label="تشغيل كلمة الحيز المالي"><span>▶</span></button></div><div class="yv-cap"><b>الحيز المالي</b><a href="https://youtu.be/3G2jfFac_rA" target="_blank" rel="noopener">شاهد على يوتيوب ↖</a></div></div><div class="yv" data-yt="dCzxBaa1_Iw"><div class="yv-box"><img src="https://i.ytimg.com/vi/dCzxBaa1_Iw/hqdefault.jpg" alt="" onerror="this.remove()"><button type="button" class="yv-play" aria-label="تشغيل كلمة مستويات الدين الخارجي"><span>▶</span></button></div><div class="yv-cap"><b>مستويات الدين الخارجي</b><a href="https://youtu.be/dCzxBaa1_Iw" target="_blank" rel="noopener">شاهد على يوتيوب ↖</a></div></div><div class="yv" data-yt="jtf9L5MuCqM"><div class="yv-box"><img src="https://i.ytimg.com/vi/jtf9L5MuCqM/hqdefault.jpg" alt="" onerror="this.remove()"><button type="button" class="yv-play" aria-label="تشغيل كلمة خفض الدين"><span>▶</span></button></div><div class="yv-cap"><b>خفض الدين</b><a href="https://youtu.be/jtf9L5MuCqM" target="_blank" rel="noopener">شاهد على يوتيوب ↖</a></div></div></div>
+   <section class="page lead-ed vids vid1" data-sec="كلمات معالي وزير المالية">
+     <span class="le-eye">كلمات معالي وزير المالية (١)</span>
+     <div class="yv" data-yt="3G2jfFac_rA"><div class="yv-box"><img src="https://i.ytimg.com/vi/3G2jfFac_rA/hqdefault.jpg" alt="" onerror="this.remove()"><button type="button" class="yv-play" aria-label="تشغيل كلمة الحيز المالي"><span>▶</span></button></div></div>
+     <h3 class="v1-t">الحيز المالي</h3>
+     <p class="v1-x">أوضح الدكتور أحمد كجوك، وزير المالية، أن الحيز المالي يتمثل في المصروفات الأولية للدولة، أي المصروفات دون خدمة الدين، والتي تمس حياة المواطنين والنشاط الاقتصادي، وتشمل الأجور والدعم والحماية الاجتماعية بمختلف أبعادها، والصيانة، وشراء الأدوية، والاستثمارات. وأشار إلى أن الحيز المالي بلغ بنهاية العام المالي الماضي نحو 2 تريليون و300 مليار جنيه، بينما تستهدف الدولة زيادته ليصل إلى نحو 4 تريليونات و800 مليار جنيه خلال السنوات الثلاث المقبلة حتى العام المالي 2029/2030، بما يعني أكثر من مضاعفة حجمه الحالي. وأكد أن الحكومة وضعت ضوابط لتحقيق هذا المستهدف دون فرض أعباء ضريبية جديدة مؤثرة أو زيادة أسعار الضرائب، وإنما من خلال توسيع القاعدة الضريبية وميكنتها، ودون التوسع في الاقتراض بما قد يؤدي إلى زيادة الضغوط التضخمية. وأضاف أن الدولة تستهدف تحقيق ذلك بالتوازي مع خفض نسبة الدين إلى أقل من 70% من الناتج المحلي الإجمالي بنهاية العام المالي 2029/2030، من خلال تنمية الموارد المحلية، وزيادة أرباح شركات الدولة وتعظيم العائد من أصولها، بما يتيح خفض تكلفة خدمة الدين وتقليص حجم المديونية إلى مستويات لم تشهدها الدولة منذ سنوات طويلة.</p>
+     <a class="v1-a" href="https://youtu.be/3G2jfFac_rA" target="_blank" rel="noopener">شاهد على يوتيوب ↖</a>
+     <div class="foot"><span>المصدر: يوتيوب</span><span>صفحة</span></div></section>
+   <section class="page lead-ed vids vid1">
+     <span class="le-eye">كلمات معالي وزير المالية (٢)</span>
+     <div class="yv" data-yt="dCzxBaa1_Iw"><div class="yv-box"><img src="https://i.ytimg.com/vi/dCzxBaa1_Iw/hqdefault.jpg" alt="" onerror="this.remove()"><button type="button" class="yv-play" aria-label="تشغيل كلمة مستويات الدين الخارجي"><span>▶</span></button></div></div>
+     <h3 class="v1-t">مستويات الدين الخارجي</h3>
+     <p class="v1-x">أكد الدكتور أحمد كجوك، وزير المالية، أن الدولة المصرية تعمل على خفض معدلات الدين الخارجي وتعزيز استدامة المالية العامة، مشيرًا إلى نجاحها في خفض الدين الخارجي لأجهزة الموازنة بنحو 6.5 مليار دولار خلال ثلاث سنوات، مع سداد التزامات تفوق حجم الاقتراض الجديد. وأوضح أن المرحلة المقبلة ترتكز على تنمية الموارد المحلية والدولارية، وتعزيز النمو الاقتصادي، وتوسيع القاعدة الضريبية دون فرض أعباء ضريبية جديدة، إلى جانب تعظيم العائد من أصول الدولة والشركات والهيئات، بما يسهم في توفير موارد إضافية وخفض المديونية. وأضاف أن الحكومة تعمل وفق خطط متوسطة الأجل لإدارة الدين وتحديد الأولويات التمويلية، مع تحقيق التوازن بين احتياجات التنمية والقدرات التمويلية للدولة، مؤكدًا أهمية تمكين القطاع الخاص، ومعالجة تحديات قطاع الطاقة، وتنمية موارد النقد الأجنبي، بما يدعم استقرار الاقتصاد المصري ويعزز قدرته على تحقيق نمو مستدام.</p>
+     <a class="v1-a" href="https://youtu.be/dCzxBaa1_Iw" target="_blank" rel="noopener">شاهد على يوتيوب ↖</a>
+     <div class="foot"><span>المصدر: يوتيوب</span><span>صفحة</span></div></section>
+   <section class="page lead-ed vids vid1">
+     <span class="le-eye">كلمات معالي وزير المالية (٣)</span>
+     <div class="yv" data-yt="jtf9L5MuCqM"><div class="yv-box"><img src="https://i.ytimg.com/vi/jtf9L5MuCqM/hqdefault.jpg" alt="" onerror="this.remove()"><button type="button" class="yv-play" aria-label="تشغيل كلمة خفض الدين"><span>▶</span></button></div></div>
+     <h3 class="v1-t">خفض الدين</h3>
+     <p class="v1-x">أكد الدكتور أحمد كجوك، وزير المالية، أن تنمية موارد الدولة تمثل أولوية رئيسية خلال المرحلة المقبلة، مشيرًا إلى أن الحكومة تستهدف خفض نسبة الدين إلى أقل من 70% من الناتج المحلي الإجمالي بحلول يونيو 2030. وأوضح أن تحقيق هذا المستهدف يرتكز على توسيع القاعدة الضريبية، وزيادة الإيرادات الضريبية وغير الضريبية دون فرض أعباء جديدة على المواطنين أو مجتمع الأعمال، إلى جانب تعظيم العائد من أصول الدولة والاستفادة من أرباح الشركات والهيئات، بما يسهم في توفير حيز مالي أكبر لتوجيه الإنفاق نحو التنمية البشرية والحماية الاجتماعية ومساندة الأنشطة الاقتصادية، مع تعزيز قدرة الاقتصاد المصري على تحقيق معدلات نمو مستدامة.</p>
+     <a class="v1-a" href="https://youtu.be/jtf9L5MuCqM" target="_blank" rel="noopener">شاهد على يوتيوب ↖</a>
+     <div class="foot"><span>المصدر: يوتيوب</span><span>صفحة</span></div></section>
+   <section class="page lead-ed vids vid1">
+     <span class="le-eye">كلمات معالي وزير المالية (٤)</span>
+     <div class="yv" data-yt="tUdQqzNHARQ"><div class="yv-box"><img src="https://i.ytimg.com/vi/tUdQqzNHARQ/hqdefault.jpg" alt="" onerror="this.remove()"><button type="button" class="yv-play" aria-label="تشغيل كلمة مسيرة الطاقة"><span>▶</span></button></div></div>
+     <h3 class="v1-t">مسيرة الطاقة</h3>
+     <p class="v1-x">أكد الدكتور أحمد كجوك، وزير المالية، أن الدولة نجحت في تحقيق وفر مالي يتراوح بين 7 و8 مليارات جنيه نتيجة ترشيد استهلاك الغاز والوقود بنسبة 20% في أجهزة الموازنة العامة للدولة خلال العام المالي الماضي، وذلك في إطار جهود التعامل مع ارتفاع تكلفة الطاقة والتحديات الإقليمية. وأوضح أن الحكومة تتعامل مع ملف الطاقة بصورة متكاملة تشمل قطاعات البترول والكهرباء والغاز والتعدين، بالتوازي مع التوسع في مشروعات الطاقة الجديدة والمتجددة والاستثمار في تطوير شبكات الطاقة، مشيرًا إلى أن كل جيجاوات من الطاقة الجديدة والمتجددة تسهم في توفير ما يتراوح بين 200 و250 مليون دولار سنويًا من واردات الغاز الطبيعي، بما يعزز كفاءة استخدام الموارد، ويخفف الضغط على النقد الأجنبي، ويدعم استدامة المالية العامة والاقتصاد المصري.</p>
+     <a class="v1-a" href="https://youtu.be/tUdQqzNHARQ" target="_blank" rel="noopener">شاهد على يوتيوب ↖</a>
      <div class="foot"><span>المصدر: يوتيوب</span><span>صفحة</span></div></section>
    <section class="page closing sector" data-sec="رئيس قطاع الحسابات والمديريات المالية">
      <div class="cl-head"><span class="eyebrow">قطاع الحسابات والمديريات المالية في المنتدى</span><h3>السيد الدكتور/ أحمد هريدي مرعي</h3></div>
